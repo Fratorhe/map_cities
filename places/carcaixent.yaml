@@ -1,0 +1,15 @@
+# A sample yaml file
+name: Carcaixent
+coordinates: [39.1202, 0.4543]
+data:
+  restaurants:
+    - name: 'la roja'
+      comment: 'barato y rico'
+
+  monuments:
+    - name: 'el passeig'
+      comment: 'ok'
+    - name: 'casa de la marquesa'
+      comment: 'test1'
+provided_by: Fran
+last_updated: 2023
