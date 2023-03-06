@@ -27,21 +27,21 @@ with left:
     m = folium.Map(location=[39.1202, 0.4543], zoom_start=1)
 
     for name, place in all_places.items():
-        folium.Marker(
-            place.coordinates, popup=place.name, tooltip=place.name
-        ).add_to(m)
+        folium.Marker(place.coordinates, popup=place.name, tooltip=place.name).add_to(m)
 
     # call to render Folium map in Streamlit
     st_data = st_folium(m, width=725)
 
 with right:
-    last_clicked = st_data['last_object_clicked_tooltip']
+    last_clicked = st_data["last_object_clicked_tooltip"]
     if last_clicked is None:
-        st.header('Click on the map to show information...')
+        st.header("Click on the map to show information...")
 
     if last_clicked:
         location_clicked = all_places[last_clicked]
-        data_clicked = location_clicked.data  # get the last click, but if Null, give my town.
+        data_clicked = (
+            location_clicked.data
+        )  # get the last click, but if Null, give my town.
 
         # name of the place
         st.title(location_clicked.name)

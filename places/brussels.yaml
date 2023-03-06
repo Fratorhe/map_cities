@@ -1,6 +1,8 @@
 # A sample yaml file
 name: Brussels
-coordinates: [50.8476, 4.3572]
+coordinates:
+  - 50.8476
+  - 4.3572
 data:
   restaurants:
     - name: 'Green mango'

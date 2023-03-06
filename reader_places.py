@@ -1,5 +1,5 @@
 import glob
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 import yaml
 from pydantic import BaseModel as pydanticBaseModel
@@ -17,33 +17,38 @@ class InfoSpot:
     comment: str
 
 
-class InfoPlace(BaseModel):
-    '''
-    Data structure of a spots in a place.
-    If we want to allow for more sections in the yaml files, they have to be included here.
-    We could use dynamic model creation in pydantic, but then the internal layers would be more difficult to handle.
-    '''
-    restaurants: Optional[List]
-    monuments: Optional[List]
+# class InfoPlace(BaseModel):
+#     """
+#     Data structure of a spots in a place.
+#     If we want to allow for more sections in the yaml files, they have to be included here.
+#     We could use dynamic model creation in pydantic, but then the internal layers would be more difficult to handle.
+#     """
+#
+#     restaurants: Optional[List]
+#     monuments: Optional[List]
+#     pubs: Optional[List]
+#     nature: Optional[List]
+#     food: Optional[List]
+#     other: Optional[List]
 
 
 class Place(BaseModel):
-    '''
+    """
     Data structure of a place.
-    '''
+    """
 
     name: str
     last_updated: str
     coordinates: List[float] = []
-    data: Optional[InfoPlace]
+    data: Optional[Dict]
     provided_by: Optional[str]
 
-    @validator('coordinates', allow_reuse=True)
+    @validator("coordinates", allow_reuse=True)
     @classmethod
     def check_coordinates_place(cls, value):
         if len(value) == 2:
             return value
-        raise ValueError('Coordinates needs to have size 2')
+        raise ValueError("Coordinates needs to have size 2")
 
 
 # @cache_resource # allows to keep yaml data in memory
@@ -51,12 +56,12 @@ def places_reader():
     """
     Reader of all the yaml files.
     """
-    files = glob.glob('places/*.yaml')
+    files = glob.glob("places/*.yaml")
 
     all_places = {}
 
     for file in files:
-        with open(file, 'r') as stream:
+        with open(file, "r") as stream:
             data_loaded = yaml.safe_load(stream)
 
         place = Place(**data_loaded)
@@ -67,7 +72,7 @@ def places_reader():
 
 if __name__ == "__main__":
     # Read YAML file
-    with open("places/carcaixent.yaml", 'r') as stream:
+    with open("places/carcaixent.yaml", "r") as stream:
         data_loaded = yaml.safe_load(stream)
 
     print(data_loaded)
