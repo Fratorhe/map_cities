@@ -1,0 +1,53 @@
+coordinates:
+- 39.4699
+- 0.3763
+data:
+  drinks:
+  - comment: cocktail with orange juice
+    name: Agua de Valencia
+  - comment: similar to almond milk
+    name: Horchata con fartons
+  - comment: coffee with burned rum, my favorite
+    name: Carajillo quemado de ron
+  - comment: fresh orange juice with best oranges
+    name: Zumo de naranja
+  - comment: shot, creamy sweet drink.Usually to drink after dinner
+    name: Crema catalana
+  - comment: shot, strong alcohol similar to sambuca
+    name: Cazalla
+  food:
+  - comment: with chicken and rabbit
+    name: Paella
+  - comment: rice with seafood
+    name: Arroz a banda
+  - comment: similar to above but with pasta
+    name: Fideua
+  - comment: black rice with seafood
+    name: Arroz negro
+  - comment: rice with meat cooked in the oven
+    name: Arroz al horno
+  - comment: pumpkin dough fried, street food
+    name: "Bu\xF1uelos de calabaza"
+  monuments:
+  - comment: Old trade market
+    name: Lonja de la seda
+  - comment: Museums, visit outside
+    name: Ciudad de las artes
+  restaurants:
+  - comment: paella
+    name: La riua
+  - comment: tapas
+    name: Martin rico ultramarinos
+  - comment: tapas
+    name: Bar biosca
+  - comment: Fusion
+    name: Saona
+  - comment: Brunch, around 10am
+    name: La pascuala
+  - comment: Lunch, rice
+    name: Casa Carmela
+  - comment: fast food, but good. On wednesday
+    name: 100 Montaditos
+last_updated: 2023
+name: Valencia
+provided_by: Fran
