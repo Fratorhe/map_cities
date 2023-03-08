@@ -1,0 +1,39 @@
+coordinates:
+- 41.3874
+- 2.1686
+data:
+  city skyline:
+  - comment: ' '
+    name: "Museu Nacional d\u2019Art de Catalunya"
+  - comment: 'You can get a drink on the last floor. Expensive, but great views. Dressing
+      code.'
+    name: Hotel W
+  - comment: ' '
+    name: Castell de Montjuic
+  drinks:
+  - comment: shot, creamy sweet drink.Usually to drink after dinner
+    name: Crema catalana
+  food:
+  - comment: grilled green onion
+    name: "cal\xE7ots"
+  monuments: []
+  restaurants:
+  - comment: fast food, but good. On wednesday
+    name: 100 Montaditos
+  - comment: coffee place
+    name: El bosc de les fades
+  - comment: brunch
+    name: Federal Cafe Gotic
+  - comment: cheap and good
+    name: Mi burrito y yo
+  - comment: ' '
+    name: Flax & Kale Passage
+  - comment: ' '
+    name: Brew Wild BCN
+  - comment: Fish
+    name: Puertecillo Born
+  - comment: "oysters, fried fish, jam\xF3n, empanadillas"
+    name: Mercat Boqueria
+last_updated: 2023
+name: Barcelona
+provided_by: Ernest
