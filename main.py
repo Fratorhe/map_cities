@@ -1,6 +1,6 @@
 import streamlit as st
 
-from print_information import display_information
+from get_information import display_information
 from reader_places import places_reader
 
 st.set_page_config(

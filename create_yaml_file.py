@@ -12,7 +12,6 @@ class YAML_file_parser:
     data: dict
 
     def __post_init__(self):
-
         # we need to re-arrange the data to fit the format of the yaml files.
         data_1 = {}
         for (
@@ -37,7 +36,7 @@ class YAML_file_parser:
             "coordinates": self.coordinates,
         }
 
-        with open(f'{self.place.lower()}.yaml', 'w') as file:
+        with open(f"{self.place.lower()}.yaml", "w") as file:
             yaml.dump(to_store, file)
 
-        print('YAML file saved.')
+        print("YAML file saved.")

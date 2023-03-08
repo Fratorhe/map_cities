@@ -1,10 +1,9 @@
-import glob
+from pathlib import Path
 from typing import List, Optional, Dict
 
 import yaml
 from pydantic import BaseModel as pydanticBaseModel
 from pydantic import validator, Extra
-from streamlit import cache_resource
 
 
 class BaseModel(pydanticBaseModel):
@@ -15,21 +14,6 @@ class BaseModel(pydanticBaseModel):
 class InfoSpot:
     name: str
     comment: str
-
-
-# class InfoPlace(BaseModel):
-#     """
-#     Data structure of a spots in a place.
-#     If we want to allow for more sections in the yaml files, they have to be included here.
-#     We could use dynamic model creation in pydantic, but then the internal layers would be more difficult to handle.
-#     """
-#
-#     restaurants: Optional[List]
-#     monuments: Optional[List]
-#     pubs: Optional[List]
-#     nature: Optional[List]
-#     food: Optional[List]
-#     other: Optional[List]
 
 
 class Place(BaseModel):
@@ -56,18 +40,22 @@ def places_reader():
     """
     Reader of all the yaml files.
     """
-    files = glob.glob("places/*.yaml")
+    files = Path("places").glob("*.yaml")
 
     all_places = {}
 
     for file in files:
-        with open(file, "r") as stream:
-            data_loaded = yaml.safe_load(stream)
-
+        data_loaded = place_reader(file)
         place = Place(**data_loaded)
         all_places[place.name] = place
 
     return all_places
+
+
+def place_reader(file):
+    with open(file, "r") as stream:
+        data_loaded = yaml.safe_load(stream)
+    return data_loaded
 
 
 if __name__ == "__main__":
