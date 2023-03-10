@@ -17,8 +17,6 @@ all_places = places_reader()
 
 left, right = st.columns(2)
 
-bot = set_telegram_bot(st.secrets["TOKEN"])
-bot.infinity_polling()
 
 # print(all_places)
 
@@ -56,3 +54,7 @@ with right:
         # person who provided the info
         st.markdown(f"*Last updated in {location_clicked.last_updated}*")
         st.markdown(f"*Information kindly provided by {location_clicked.provided_by}*")
+
+
+bot = set_telegram_bot(st.secrets["TOKEN"])
+bot.infinity_polling()
