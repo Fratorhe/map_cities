@@ -2,6 +2,7 @@ import streamlit as st
 
 from get_information import display_information
 from reader_places import places_reader
+from telegram_bot import set_telegram_bot
 
 st.set_page_config(
     page_title="streamlit-folium documentation",
@@ -15,6 +16,9 @@ all_places = places_reader()
 "# Map with travel advices"
 
 left, right = st.columns(2)
+
+bot = set_telegram_bot(st.secrets["TOKEN"])
+bot.infinity_polling()
 
 # print(all_places)
 

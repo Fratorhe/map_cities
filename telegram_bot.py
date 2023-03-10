@@ -9,15 +9,15 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from get_information import get_cities, get_sections, get_places_section
 from reader_places import place_reader
 
+# def get_token(file):
+#     with open(file, "r") as f:
+#         token = f.readline()
+#     return token
 
-def get_token(file):
-    with open(file, "r") as f:
-        token = f.readline()
-    return token
 
-
-def set_telegram_bot():
-    token = get_token(".TOKEN")
+def set_telegram_bot(token):
+    # token = get_token(".TOKEN")
+    token = token
     bot = telebot.TeleBot(token)
 
     @bot.message_handler(commands=["start", "hello"])
