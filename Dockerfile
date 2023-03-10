@@ -1,29 +1,21 @@
-FROM python:3.10-slim AS base
+# Use the official lightweight Python image.
+# https://hub.docker.com/_/python
+FROM python:3.9-slim
 
-ENV PATH /opt/venv/bin:$PATH
-ENV PIP_DISABLE_PIP_VERSION_CHECK 1
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
+# Allow statements and log messages to immediately appear in the Knative logs
+ENV PYTHONUNBUFFERED True
 
-FROM base AS builder
-RUN python -m venv /opt/venv
-COPY requirements.txt .
-RUN pip install --no-cache-dir --requirement requirements.txt
+# Copy local code to the container image.
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+COPY . ./
 
-FROM base
+# Install production dependencies.
+RUN pip install -r requirements.txt
 
-#WORKDIR /app
-RUN #apt-get update && apt-get install --yes --no-install-recommends sed mime-support libjemalloc2
-#COPY --from=builder /opt/venv /opt/venv
-#COPY . .
-
-RUN useradd -r user
-USER user
-
-ARG PORT=8000
-ENV PORT $PORT
-EXPOSE $PORT
-
-#ENV LD_PRELOAD /usr/lib/x86_64-linux-gnu/libjemalloc.so.2
-
+# Run the web service on container startup. Here we use the gunicorn
+# webserver, with one worker process and 8 threads.
+# For environments with multiple CPU cores, increase the number of workers
+# to be equal to the cores available.
+# Timeout is set to 0 to disable the timeouts of the workers to allow Cloud Run to handle instance scaling.
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 telegram_bot:app
