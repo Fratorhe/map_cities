@@ -3,6 +3,7 @@ import os
 
 import telebot
 from flask import Flask, request
+from flask_sslify import SSLify
 from telebot import types
 from telebot.formatting import mbold, mitalic
 
@@ -16,6 +17,8 @@ from reader_places import place_reader
 
 TOKEN = os.getenv('TOKEN')
 server = Flask(__name__)
+
+sslify = SSLify(server)
 
 bot = telebot.TeleBot(TOKEN)
 cities = get_cities()
