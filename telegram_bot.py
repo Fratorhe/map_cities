@@ -6,6 +6,7 @@ from flask import Flask, request
 from flask_sslify import SSLify
 from telebot import types
 from telebot.formatting import mbold, mitalic
+from telebot.util import quick_markup
 
 from get_information import get_cities, get_sections, get_places_section
 from reader_places import place_reader
@@ -14,7 +15,7 @@ from dotenv import load_dotenv
 print("Logging message", flush=True)
 
 
-project_folder = os.path.expanduser('~/map_cities')  # adjust as appropriate
+project_folder = os.path.expanduser('.')  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
 
 TOKEN = os.getenv('TOKEN')
@@ -36,15 +37,12 @@ def makeKeyboard(iterable_element, element_type, **kwargs):
     for key, value in kwargs.items():
         s += f', "{key}": "{value}"'
 
-    markup = types.InlineKeyboardMarkup()
+    markup_dict = {}
     for element in iterable_element:
-        markup.add(
-            types.InlineKeyboardButton(
-                text=element,
-                callback_data="{" + f'"{element_type}": "{element}"{s}' + "}",
-            )
-        )
-    print(markup)
+        markup_dict[element] = {'callback_data':"{" + f'"{element_type}": "{element}"{s}' + "}"}
+
+    markup = quick_markup(markup_dict, row_width=2)
+
     return markup
 
 
@@ -105,7 +103,7 @@ def handle_section(call, dict_data_call):
 
     bot.send_message(call.from_user.id, s, parse_mode="MarkdownV2")
 
-
+### comment to work in local
 @app.route("/" + TOKEN, methods=["POST"])
 def getMessage():
     print("Get Message", flush=True)
@@ -124,6 +122,10 @@ bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
 @app.route("/")
 def hello_world():
     return "<p>Hello, World!</p>"
+### comment to work in local
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) # comment to work in local
+
+    # bot.infinity_polling()
