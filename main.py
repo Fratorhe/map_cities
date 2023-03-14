@@ -1,7 +1,22 @@
 import streamlit as st
 
-from get_information import display_information
+from get_information import get_sections, get_places_section
 from reader_places import places_reader
+
+def display_information(data):
+    # get the sections
+    sections = get_sections(data)
+
+    for section in sections:
+        places_section = get_places_section(data, section)
+        if places_section:
+            st.header(section.title())
+            s = ""
+            for place in places_section:
+                s += f'- **{place["name"].title()}**: {place["comment"]} \n'
+
+            st.markdown(s)
+
 
 st.set_page_config(
     page_title="streamlit-folium documentation",
