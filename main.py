@@ -2,7 +2,6 @@ import streamlit as st
 
 from get_information import display_information
 from reader_places import places_reader
-from telegram_bot import set_telegram_bot
 
 st.set_page_config(
     page_title="streamlit-folium documentation",
@@ -16,7 +15,6 @@ all_places = places_reader()
 "# Map with travel advices"
 
 left, right = st.columns(2)
-
 
 # print(all_places)
 
@@ -54,7 +52,3 @@ with right:
         # person who provided the info
         st.markdown(f"*Last updated in {location_clicked.last_updated}*")
         st.markdown(f"*Information kindly provided by {location_clicked.provided_by}*")
-
-
-bot = set_telegram_bot(st.secrets["TOKEN"])
-bot.infinity_polling()
