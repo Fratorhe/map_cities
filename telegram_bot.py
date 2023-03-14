@@ -16,9 +16,9 @@ from reader_places import place_reader
 #     return token
 
 TOKEN = os.getenv('TOKEN')
-server = Flask(__name__)
+app = Flask(__name__)
 
-sslify = SSLify(server)
+sslify = SSLify(app)
 
 bot = telebot.TeleBot(TOKEN)
 cities = get_cities()
@@ -103,7 +103,7 @@ def handle_section(call, dict_data_call):
     bot.send_message(call.from_user.id, s, parse_mode="MarkdownV2")
 
 
-# @server.route("/" + TOKEN, methods=["POST"])
+# @app.route("/" + TOKEN, methods=["POST"])
 # def getMessage():
 #     json_string = request.get_data().decode("utf-8")
 #     update = telebot.types.Update.de_json(json_string)
@@ -111,7 +111,7 @@ def handle_section(call, dict_data_call):
 #     return "!", 200
 #
 #
-# @server.route("/")
+# @app.route("/")
 # def webhook():
 #     bot.remove_webhook()
 #     bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
@@ -119,4 +119,4 @@ def handle_section(call, dict_data_call):
 
 
 if __name__ == "__main__":
-    server.run(debug=True)
+    app.run(debug=True)
