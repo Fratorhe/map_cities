@@ -1,5 +1,6 @@
 import json
 import os
+import pathlib
 
 import telebot
 from flask import Flask, request
@@ -14,8 +15,9 @@ from reader_places import place_reader
 from dotenv import load_dotenv
 print("Logging message", flush=True)
 
+folder_path = pathlib.Path(__file__).parent.resolve()
 
-project_folder = os.path.expanduser('~/map_cities')  # adjust as appropriate
+project_folder = os.path.expanduser(folder_path)  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
 
 TOKEN = os.getenv('TOKEN')
@@ -74,7 +76,6 @@ def handle_query_city(call):
 
 
 def handle_city(call, dict_data_call):
-    folder_path = pathlib.Path(__file__).parent.resolve()
 
     city_name = dict_data_call["city"]
 
@@ -92,7 +93,6 @@ def handle_city(call, dict_data_call):
 
 
 def handle_section(call, dict_data_call):
-    folder_path = pathlib.Path(__file__).parent.resolve()
 
     city_name = dict_data_call["city"]
     section = dict_data_call["section"]
