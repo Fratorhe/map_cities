@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 print("Logging message", flush=True)
 
 
-project_folder = os.path.expanduser('.')  # adjust as appropriate
+project_folder = os.path.expanduser('~/map_cities')  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
 
 TOKEN = os.getenv('TOKEN')
@@ -42,6 +42,7 @@ def makeKeyboard(iterable_element, element_type, **kwargs):
         markup_dict[element] = {'callback_data':"{" + f'"{element_type}": "{element}"{s}' + "}"}
 
     markup = quick_markup(markup_dict, row_width=2)
+    print(markup_dict)
 
     return markup
 
@@ -73,9 +74,13 @@ def handle_query_city(call):
 
 
 def handle_city(call, dict_data_call):
+    folder_path = pathlib.Path(__file__).parent.resolve()
+
     city_name = dict_data_call["city"]
 
-    city_data = place_reader(f"places/{city_name}.yaml")["data"]
+    city_data = place_reader(f"{folder_path}/places/{city_name}.yaml")["data"]
+    print('handling city')
+    print(city_data)
     sections = get_sections(city_data)
 
     bot.send_message(
@@ -87,10 +92,12 @@ def handle_city(call, dict_data_call):
 
 
 def handle_section(call, dict_data_call):
+    folder_path = pathlib.Path(__file__).parent.resolve()
+
     city_name = dict_data_call["city"]
     section = dict_data_call["section"]
 
-    city_data = place_reader(f"places/{city_name}.yaml")["data"]
+    city_data = place_reader(f"{folder_path}/places/{city_name}.yaml")["data"]
     places_section = get_places_section(city_data, section)
     # print(places_section)
     if places_section:
@@ -109,6 +116,7 @@ def getMessage():
     print("Get Message", flush=True)
     json_string = request.get_data().decode("utf-8")
     update = telebot.types.Update.de_json(json_string)
+    print(update)
     bot.process_new_updates([update])
     return "TESTING!", 200
 

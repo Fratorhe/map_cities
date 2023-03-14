@@ -40,7 +40,9 @@ def places_reader():
     """
     Reader of all the yaml files.
     """
-    files = Path("places").glob("*.yaml")
+    path_package = pathlib.Path(__file__).parent.resolve()
+
+    files = Path(f"{path_package}/places").glob("*.yaml")
 
     all_places = {}
 
