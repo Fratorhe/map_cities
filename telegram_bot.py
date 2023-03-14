@@ -11,6 +11,9 @@ from get_information import get_cities, get_sections, get_places_section
 from reader_places import place_reader
 
 from dotenv import load_dotenv
+print("Logging message", flush=True)
+
+
 project_folder = os.path.expanduser('~/map_cities')  # adjust as appropriate
 load_dotenv(os.path.join(project_folder, '.env'))
 
@@ -41,6 +44,7 @@ def makeKeyboard(iterable_element, element_type, **kwargs):
                 callback_data="{" + f'"{element_type}": "{element}"{s}' + "}",
             )
         )
+    print(markup)
     return markup
 
 
@@ -50,7 +54,7 @@ def handle_command_places(message):
         chat_id=message.chat.id,
         text="Here are the values of stringList",
         reply_markup=makeKeyboard(cities, "city"),
-        parse_mode="HTML",
+#        parse_mode="HTML",
     )
 
 
@@ -104,17 +108,17 @@ def handle_section(call, dict_data_call):
 
 @app.route("/" + TOKEN, methods=["POST"])
 def getMessage():
+    print("Get Message", flush=True)
     json_string = request.get_data().decode("utf-8")
     update = telebot.types.Update.de_json(json_string)
     bot.process_new_updates([update])
     return "TESTING!", 200
 
 
-#@app.route("/")
-#def webhook():
-#    bot.remove_webhook()
-#    bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
-#    return "!", 200
+
+print('setting webhook', flush=True)
+bot.remove_webhook()
+bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
 
 
 @app.route("/")
