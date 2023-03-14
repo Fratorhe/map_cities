@@ -10,10 +10,9 @@ from telebot.formatting import mbold, mitalic
 from get_information import get_cities, get_sections, get_places_section
 from reader_places import place_reader
 
-# def get_token(file):
-#     with open(file, "r") as f:
-#         token = f.readline()
-#     return token
+from dotenv import load_dotenv
+project_folder = os.path.expanduser('~/map_cities')  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 TOKEN = os.getenv('TOKEN')
 app = Flask(__name__)
