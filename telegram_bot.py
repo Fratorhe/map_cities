@@ -2,6 +2,7 @@ import json
 import os
 
 import telebot
+from dotenv import load_dotenv
 from flask import Flask, request
 from flask_sslify import SSLify
 from telebot import types
@@ -10,12 +11,15 @@ from telebot.formatting import mbold, mitalic
 from get_information import get_cities, get_sections, get_places_section
 from reader_places import place_reader
 
+project_folder = os.path.expanduser("~/map_cities")  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, ".env"))
+
 # def get_token(file):
 #     with open(file, "r") as f:
 #         token = f.readline()
 #     return token
 
-TOKEN = os.getenv('TOKEN')
+TOKEN = os.getenv("TOKEN")
 app = Flask(__name__)
 
 sslify = SSLify(app)
@@ -103,19 +107,19 @@ def handle_section(call, dict_data_call):
     bot.send_message(call.from_user.id, s, parse_mode="MarkdownV2")
 
 
-# @app.route("/" + TOKEN, methods=["POST"])
-# def getMessage():
-#     json_string = request.get_data().decode("utf-8")
-#     update = telebot.types.Update.de_json(json_string)
-#     bot.process_new_updates([update])
-#     return "!", 200
-#
-#
-# @app.route("/")
-# def webhook():
-#     bot.remove_webhook()
-#     bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
-#     return "!", 200
+@app.route("/" + TOKEN, methods=["POST"])
+def getMessage():
+    json_string = request.get_data().decode("utf-8")
+    update = telebot.types.Update.de_json(json_string)
+    bot.process_new_updates([update])
+    return "!", 200
+
+
+@app.route("/")
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url="https://torresh.pythonanywhere.com/" + TOKEN)
+    return "!", 200
 
 
 if __name__ == "__main__":
