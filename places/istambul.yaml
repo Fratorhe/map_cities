@@ -1,0 +1,151 @@
+coordinates:
+- 41.0082
+- 28.9784
+data:
+  Bakery:
+  - comment: A bakery known for its traditional Turkish sweets and pastries.
+    name: Confectioner Cafer Erol
+  - comment: A bakery that specializes in Turkish sweets, particularly baklava.
+    name: "Hakk\u0131 Zade Hafiz Mustafa 1864"
+  - comment: A bakery that specializes in baklava and other Turkish sweets.
+    name: "Karak\xF6y G\xFCll\xFCo\u011Flu"
+  Cafe:
+  - comment: A cozy cafe serving delicious coffee and desserts.
+    name: Giriftar Cafe
+  - comment: A cafe serving traditional Turkish breakfast and brunch with a Mesopotamian
+      touch.
+    name: Mesopotamian Breakfast Brunch Cafe
+  - comment: "A popular cafe that serves coffee and breakfast in the Kad\u0131k\xF6\
+      y district."
+    name: "Happy Moon's Kad\u0131k\xF6y"
+  - comment: A trendy cafe with an industrial vibe, offering coffee and light bites.
+    name: Barmy
+  - comment: A cafe that also functions as a boutique selling unique clothing items.
+    name: bienti&butik
+  - comment: A cafe offering a delicious breakfast and a view of the Bosphorus.
+    name: "Ortak\xF6y Cafe Kahvalt\u0131"
+  - comment: A cafe known for its Turkish coffee and tea.
+    name: "\xC7AKMAK CAFE BE\u015E\u0130KTA\u015E"
+  - comment: A historic cafe that serves the traditional Turkish drink of boza.
+    name: "Tarihi Vefa Bozac\u0131s\u0131"
+  Market:
+  - comment: A historic market also known as the Spice Bazaar that sells spices, sweets
+      and souvenirs.
+    name: "M\u0131s\u0131r \xC7ar\u015F\u0131s\u0131"
+  - comment: One of the oldest and largest covered markets in the world that sells
+      a wide range of goods.
+    name: Grand Bazaar
+  Monument:
+  - comment: One of the largest mosques in Istanbul with a modern architectural style.
+    name: "\xC7aml\u0131ca Camii"
+  - comment: An underground cistern from the Byzantine era with impressive columns.
+    name: Theodosius Cistern
+  - comment: A 19th century Roman Catholic church with neo-Gothic architecture.
+    name: Sent Antuan Kilisesi
+  - comment: A former palace complex that now serves as a museum of Ottoman history.
+    name: "Ihlamur Kas\u0131rlar\u0131 (Milli Saraylar)"
+  - comment: An Armenian church built in the 19th century in the Byzantine architectural
+      style.
+    name: Balkh church
+  - comment: A castle built into a natural rock formation that offers panoramic views
+      of Cappadocia.
+    name: Uchisar Castle
+  - comment: A mosque built in the 16th century by the famous Ottoman architect Mimar
+      Sinan.
+    name: Mihrimah Sultan Mosque
+  - comment: "A historic neighborhood that features the Beyaz\u0131t Tower, Istanbul\
+      \ University and the Grand Bazaar."
+    name: "Beyaz\u0131t"
+  - comment: A grand mosque built in the 16th century by the Ottoman architect Mimar
+      Sinan.
+    name: Suleymaniye Mosque
+  - comment: A historic neighborhood known for its colorful houses and seafood restaurants.
+    name: "Arnavutk\xF6y"
+  - comment: A large square that serves as a central hub for transportation and cultural
+      events.
+    name: Taksim Square
+  - comment: A historic neighborhood that features the famous Pera Museum and trendy
+      cafes.
+    name: "\u015Ei\u015Fhane"
+  - comment: "An Eastern Orthodox church located on the B\xFCy\xFCkada Island in the\
+      \ Sea of Marmara."
+    name: Aya Yorgi Church
+  - comment: A historic tower located on an islet in the Bosphorus that offers stunning
+      views of Istanbul.
+    name: "B\xFCy\xFCkada \"Maiden's Tower\""
+  - comment: A grand mosque built in the 17th century with an iconic blue-tiled interior.
+    name: The Blue Mosque
+  - comment: Ancient Roman ruins located near the Hippodrome of Constantinople.
+    name: Sphendone Remains
+  - comment: A fortress built in the 15th century by the Ottoman Sultan Mehmed II
+      to control the Bosphorus.
+    name: Rumeli Fortress
+  - comment: A medieval tower located in the Galata neighborhood that offers panoramic
+      views of Istanbul.
+    name: Galata Tower
+  Museum:
+  - comment: A museum that showcases the scientific achievements of Islamic civilization.
+    name: Istanbul Museum of the History of Science and Technology in Islam
+  - comment: A museum complex that showcases artifacts from various ancient civilizations.
+    name: Istanbul Archaeological Museums
+  Park:
+  - comment: A peaceful park located in the heart of Istanbul with stunning views
+      of the Bosphorus.
+    name: "G\xFClhane Park"
+  Restaurant:
+  - comment: A rooftop restaurant with a beautiful view of the Bosphorus.
+    name: "Eskiba\u011F Teras Restaurant"
+  - comment: A restaurant offering traditional Turkish dishes, particularly those
+      from Southeast Turkey.
+    name: "\xC7iya Sofras\u0131"
+  - comment: A historic restaurant located in the Spice Bazaar, serving classic Turkish
+      dishes.
+    name: "Pandeli Restaurant - M\u0131s\u0131r \xC7ar\u015F\u0131s\u0131"
+  - comment: A restaurant that serves traditional Ottoman cuisine in a historic building.
+    name: Babayanevi restorant
+  - comment: A restaurant in a beautifully restored Ottoman mansion, serving Turkish
+      cuisine.
+    name: "Sar\u0131kaya Konak"
+  - comment: A restaurant that offers a modern take on traditional Turkish dishes.
+    name: My Chef
+  - comment: A restaurant that serves traditional Crimean Tatar cuisine.
+    name: Tatar Salim
+  - comment: A restaurant that serves traditional Turkish dishes, particularly from
+      the Adana region.
+    name: Adem Baba
+  - comment: A restaurant that serves traditional Balkan cuisine.
+    name: "Balkan Lokantas\u0131"
+  - comment: A restaurant that serves the classic Turkish dish of Iskender kebab.
+    name: "\u0130SKENDER \xAE Kurulu\u015F 1867"
+  - comment: A restaurant that offers traditional Ottoman dishes in a historic setting.
+    name: "Sab\u0131rta\u015F\u0131 Restoran"
+  - comment: A traditional meyhane (tavern) that serves Turkish meze and raki.
+    name: "M\xFC\u015Fterek Meyhane"
+  Shop:
+  - comment: A historic covered arcade with many shops, cafes and restaurants.
+    name: "\xC7i\xE7ek Pasaj\u0131"
+  - comment: A store specializing in handmade carpets and kilims.
+    name: Vezirhan Carpet & Kilim
+  Street Food:
+  - comment: A type of fish sandwich served on the streets of Istanbul.
+    name: Balik ekmek
+  district:
+  - comment: A large and bustling district located on the Asian side of Istanbul that
+      is known for its lively atmosphere, beautiful scenery, and historic architecture.
+    name: "Kad\u0131k\xF6y"
+  monument:
+  - comment: An ancient underground water reservoir in Istanbul that was built by
+      the Byzantine Emperor Justinian I in the 6th century.
+    name: Basilica Cistern
+  - comment: A stunning 19th-century palace located in Istanbul that served as the
+      administrative center of the Ottoman Empire.
+    name: "Dolmabah\xE7e Palace"
+  - comment: A former Christian church and later a mosque that is now a museum and
+      one of the most iconic landmarks of Istanbul.
+    name: Hagia Sophia
+  - comment: A large palace that served as the primary residence and administrative
+      headquarters of the Ottoman sultans for nearly 400 years.
+    name: "Topkap\u0131 Saray\u0131"
+last_updated: 2023
+name: Istambul
+provided_by: Elena, Nazli, Ipek and Fran

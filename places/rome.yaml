@@ -1,0 +1,29 @@
+coordinates:
+- 41.9028
+- 12.4964
+data:
+  Monument:
+  - comment: Ancient amphitheatre in the centre of Rome.
+    name: Colosseo
+  - comment: A beautiful and iconic square in Rome, known for its Spanish Steps and
+      beautiful fountain.
+    name: Piazza d'espagna
+  Neighbourhood:
+  - comment: A seaside town near Rome known for its castle and beach.
+    name: Santa Severa
+  - comment: A large archaeological site and ancient port city located near Rome.
+    name: Ostia
+  - comment: A charming and trendy neighbourhood known for its boutiques, bars and
+      restaurants.
+    name: Neighbourhood Monti
+  - comment: A vibrant neighbourhood with narrow streets, lively squares, and a wide
+      selection of restaurants and bars.
+    name: Trastevere
+  Restaurant:
+  - comment: A historic pizzeria in Rome known for its delicious thin-crust pizzas.
+    name: Pizzeria Baffetto
+  - comment: Great restaurant.
+    name: Vecchia Roma
+last_updated: 2023
+name: Rome
+provided_by: Vincent

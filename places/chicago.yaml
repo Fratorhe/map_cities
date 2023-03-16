@@ -1,0 +1,63 @@
+coordinates:
+- 41.8781
+- -87.6298
+data:
+  Accommodation:
+  - comment: Affordable hostel in the Lincoln Park neighborhood
+    name: '''Chicago Getaway Hostel'''
+  Art:
+  - comment: Outdoor murals depicting cultural and historical scenes
+    name: '''16th St Murals (Westside - S Wood to S Canal)'''
+  Bar:
+  - comment: Blues music club owned by famous blues guitarist Buddy Guy
+    name: Buddy Guy's Legends
+  - comment: Famous dive bar known for its political satire artwork
+    name: '''Old Town Ale House'''
+  - comment: Intimate music venue known for hosting alternative and indie bands
+    name: '''The Empty Bottle'''
+  - comment: Retro bar with live music and vintage decor
+    name: '''The California Clipper'''
+  - comment: Blues music club with two stages and live music every night
+    name: '''Kingston Mines'''
+  Monument:
+  - comment: Observation deck on the 103rd floor of Willis Tower (formerly known as
+      Sears Tower)
+    name: '''Skydeck Chicago'''
+  - comment: Sculpture by Anish Kapoor, also known as 'The Bean'
+    name: '''Cloud Gate'''
+  - comment: Large fountain located in Grant Park
+    name: '''Buckingham Fountain'''
+  Museum:
+  - comment: Historic building with art exhibits, events, and performances
+    name: '''Chicago Cultural Center'''
+  - comment: Natural history museum with exhibits on dinosaurs, ancient cultures,
+      and more
+    name: '''Field Museum'''
+  - comment: Museum and planetarium with exhibits on astronomy and space exploration
+    name: '''Adler Planetarium'''
+  Park:
+  - comment: Botanical garden and outdoor museum
+    name: '''Morton Arboretum Visitor Center'''
+  - comment: Tourist destination with restaurants, shops, and attractions
+    name: '''Navy Pier'''
+  - comment: Lakefront park with scenic views of Lake Michigan
+    name: '''Promontory Point'''
+  - comment: Public park with sculptures, gardens, and the famous Cloud Gate sculpture
+    name: '''Millennium Park'''
+  - comment: Free admission zoo in the Lincoln Park neighborhood
+    name: '''Lincoln Park Zoo'''
+  - comment: Large botanical garden and conservatory on the West Side of Chicago
+    name: '''Garfield Park Conservatory'''
+  Restaurant:
+  - comment: Chicago-style deep-dish pizza
+    name: Pequod's Pizza
+  - comment: Chicago-style deep-dish pizza
+    name: Giordano's Pizza
+  - comment: Mexican restaurant known for its carnitas (pork) dishes
+    name: '''Carnitas Uruapan Restaurant'''
+  Shopping District:
+  - comment: Shopping district in downtown Chicago
+    name: '''Magnificent Mile'''
+last_updated: 2023
+name: Chicago
+provided_by: Fran

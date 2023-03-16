@@ -4,6 +4,7 @@ from typing import List, Optional, Dict
 import yaml
 from pydantic import BaseModel as pydanticBaseModel
 from pydantic import validator, Extra
+from streamlit import cache_data
 
 
 class BaseModel(pydanticBaseModel):
@@ -27,7 +28,6 @@ class Place(BaseModel):
     data: Optional[Dict]
     provided_by: Optional[str]
 
-    @validator("coordinates", allow_reuse=True)
     @classmethod
     def check_coordinates_place(cls, value):
         if len(value) == 2:
@@ -35,7 +35,7 @@ class Place(BaseModel):
         raise ValueError("Coordinates needs to have size 2")
 
 
-# @cache_resource # allows to keep yaml data in memory
+@cache_data  # allows to keep yaml data in memory
 def places_reader():
     """
     Reader of all the yaml files.

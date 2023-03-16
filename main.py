@@ -1,7 +1,9 @@
 import streamlit as st
+import yaml
 
 from get_information import get_sections, get_places_section
 from reader_places import places_reader
+
 
 def display_information(data):
     # get the sections
@@ -19,15 +21,23 @@ def display_information(data):
 
 
 st.set_page_config(
-    page_title="streamlit-folium documentation",
-    page_icon=":world_map:️",
+    page_title="City Explorer",
+    page_icon=":world_map:",
     layout="wide",
 )
+
+# load the text for the website.
+with open('text.yaml', "r") as stream:
+    text_website = yaml.safe_load(stream)
 
 # load the yaml data.
 all_places = places_reader()
 
-"# Map with travel advices"
+st.title(text_website['title'])
+
+st.markdown(f'<div style="text-align: justify;"><p><i>{text_website["intro"]}<i><p></div>', unsafe_allow_html=True)
+st.markdown(f'<div style="text-align: justify;"><p><i>{text_website["contact"]}<i><p></div>', unsafe_allow_html=True)
+
 
 left, right = st.columns(2)
 
@@ -38,7 +48,7 @@ with left:
 
     from streamlit_folium import st_folium
 
-    # center on Liberty Bell, add marker
+    # center my town
     m = folium.Map(location=[39.1202, 0.4543], zoom_start=1)
 
     for name, place in all_places.items():
@@ -67,3 +77,7 @@ with right:
         # person who provided the info
         st.markdown(f"*Last updated in {location_clicked.last_updated}*")
         st.markdown(f"*Information kindly provided by {location_clicked.provided_by}*")
+
+st.columns(1)
+st.markdown(f'<div style="text-align: justify;"><p><i>{text_website["footer"]}<i><p></div>',
+                unsafe_allow_html=True)

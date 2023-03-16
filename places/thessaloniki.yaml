@@ -1,0 +1,66 @@
+coordinates:
+- 40.6401
+- 22.9444
+data:
+  Bar:
+  - comment: A trendy bar with creative cocktails and live music.
+    name: The Blue Cup | Creative bar
+  - comment: A rooftop bar with stunning views of Thessaloniki and delicious cocktails.
+    name: Vanilla World Skybar
+  - comment: A lively bar with a great selection of drinks and live music.
+    name: "\u03A5psilon"
+  - comment: A trendy bar with a unique decor and a lively atmosphere.
+    name: Whope
+  - comment: A small bar with a cozy atmosphere and great cocktails.
+    name: Matute
+  - comment: A popular bar with a great selection of drinks and a lively atmosphere.
+    name: "\u03A5\u03C6\u03AE\u03BB\u03B9\u03BF\u03C2 Bar Nationale"
+  - comment: A rooftop bar with stunning views of the city and a great selection of
+      drinks.
+    name: Ciel Bar
+  - comment: A lively bar with a great atmosphere and creative cocktails.
+    name: The Rooster's Nest
+  - comment: A small bar with a unique decor and a great selection of drinks.
+    name: "\u0394\u03AD\u03BD\u03C4\u03C1\u03BF \u03C3\u03C4\u03BF Bar"
+  Cafe:
+  - comment: A cozy cafe with a great selection of coffee and pastries.
+    name: CAFE Jasmine
+  Distillery:
+  - comment: A distillery offering tours and tastings of local spirits.
+    name: The Nectar Distillery
+  Market:
+  - comment: A flea market offering unique souvenirs and antiques.
+    name: Bit Bazar
+  - comment: A market showcasing local products and delicacies from all over Greece.
+    name: ERGON Agora
+  Monument:
+  - comment: An ancient village with traditional houses and stunning views of the
+      sea.
+    name: Parthenonas
+  Museum:
+  - comment: A museum showcasing the Byzantine culture of Thessaloniki.
+    name: Museum of Byzantine Culture
+  Park:
+  - comment: A small park in the center of Thessaloniki with a playground for kids.
+    name: "\u03A0\u03B1\u03C1\u03BA\u03AC\u03BA\u03B9 \u0393\u03B1\u03BB\u03B1\u03BD\
+      \u03AC\u03BA\u03B7"
+  Restaurant:
+  - comment: A picturesque fishing village with great seafood restaurants.
+    name: Porto Koufo
+  - comment: A cozy restaurant with a warm atmosphere and delicious food.
+    name: Rover
+  - comment: A popular burger joint with a creative menu and outdoor seating.
+    name: "Gor\xEDlas"
+  - comment: A sophisticated restaurant and bar with an extensive wine list.
+    name: CHILAI wine - restaurant - bar
+  - comment: A rooftop restaurant with a romantic atmosphere and breathtaking views.
+    name: Urania
+  - comment: A traditional Greek taverna serving delicious food and local wine.
+    name: "\u039D\u03AD\u03B1 \u03A6\u03C9\u03BB\u03B9\u03AC"
+  - comment: A cozy restaurant serving traditional Turkish dishes.
+    name: Tabya
+  - comment: A popular restaurant serving delicious Turkish food and mezze.
+    name: "\u0393\u03B9\u03CC\u03BA \u039C\u03C0\u03B1\u03BB\u03AF\u03BA"
+last_updated: 2023
+name: Thessaloniki
+provided_by: Fran
