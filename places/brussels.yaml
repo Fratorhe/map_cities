@@ -1,15 +1,81 @@
-# A sample yaml file
-name: Brussels
 coordinates:
-  - 50.8476
-  - 4.3572
+- 50.8476
+- 4.3572
 data:
-  restaurants:
-    - name: 'Green mango'
-      comment: 'Best burgers'
-
-  monuments:
-      - name: 'Grand Place'
-        comment: 'pretty'
-provided_by: Fran
+  Bar:
+  - comment: A cozy and quirky cafe with an artistic atmosphere.
+    name: Goupil Le Fol
+  - comment: A cozy jazz bar with a relaxed atmosphere and a great drink selection.
+    name: L'arxiduc
+  - comment: A popular brewery with a wide selection of craft beers.
+    name: Brussels Beer Project
+  - comment: Bar with a relaxed atmosphere and a great drink selection.
+    name: Bar des amis
+  - comment: A rooftop bar with stunning views of Brussels.
+    name: The Eight Rooftop Cocktail Bar
+  - comment: A popular bar with live music and a great drink selection. Late night
+      also trashy bar.
+    name: Bonnefooi
+  - comment: A popular bar with a cozy atmosphere and a great drink selection.
+    name: Cafe belga
+  Market:
+  - comment: A historic covered market with plenty of drink options.
+    name: Halles de Saint Gery
+  Monument:
+  - comment: A UNESCO World Heritage site with beautiful architecture and a lively
+      atmosphere.
+    name: Grand Place
+  - comment: A beautiful tower in the middle of a park, better than seeing the atomium.
+    name: Japanese Tower
+  Park:
+  - comment: A large public park with beautiful gardens and historical landmarks.
+    name: Parc du Cinquantenaire
+  - comment: A large park on the edge of Brussels with plenty of walking and biking
+      paths.
+    name: Bois de la Cambre
+  - comment: A beautiful park with a large collection of trees and plants.
+    name: Arboretum Tervuren
+  - comment: A large public park with plenty of green space and walking paths.
+    name: Parc Josaphat
+  Restaurant:
+  - comment: A portuguese pastry shop with a wide variety of delicious desserts.
+    name: Pastry Garcia
+  - comment: An Ethiopian restaurant with authentic dishes and a cozy atmosphere.
+    name: Toukoul
+  - comment: A Latin American restaurant.
+    name: Palasi Latino
+  - comment: A Belgian restaurant with a wide selection of beers and classic dishes.
+    name: Le Zinneke
+  - comment: An Indian restaurant with vegetarian and vegan options.
+    name: Saravanaa Bhavan
+  - comment: An Italian restaurant with a focus on Neapolitan pizza.
+    name: Educazione napoletana
+  - comment: A restaurant with many small restaurants inside.
+    name: Wolf
+  - comment: Best burguers in town.
+    name: Green Mango
+  - comment: A Turkish restaurant, very pink.
+    name: Hanimeli
+  - comment: An American-style restaurant with a focus on BBQ and smoked meats.
+    name: Holy smoke
+  - comment: Trashy karaoke bar.
+    name: Nua
+  - comment: A Japanese restaurant with a focus on ramen and other noodle dishes.
+    name: Menma
+  - comment: A Hong-kong restaurant, handmade noodles.
+    name: Au bon bol
+  - comment: Best ramen in town. Needs booking.
+    name: Koku ramen
+  - comment: A popular spot for Belgian fries with a variety of sauces. Samurai is
+      the best.
+    name: Frit Flagey
+  - comment: Popular spot for Belgian fries in the center with a great selection of
+      sauces.
+    name: Friterie Tabora
+  - comment: An Italian restaurant with a focus on panzerotti and other street food.
+    name: La panzerottata
+  - comment: A Lebanese restaurant with authentic dishes and a cozy atmosphere.
+    name: My Tannour
 last_updated: 2023
+name: Brussels
+provided_by: Fran
