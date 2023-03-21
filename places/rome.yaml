@@ -2,6 +2,9 @@ coordinates:
 - 41.9028
 - 12.4964
 data:
+  ' Restaurant':
+  - comment: ' Great food.'
+    name: Ivo a Trastevere
   Monument:
   - comment: Ancient amphitheatre in the centre of Rome.
     name: Colosseo
@@ -26,4 +29,4 @@ data:
     name: Vecchia Roma
 last_updated: 2023
 name: Rome
-provided_by: Vincent
+provided_by: Vincent, Jillerme

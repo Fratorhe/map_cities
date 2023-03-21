@@ -8,7 +8,7 @@ from create_yaml_file import YAML_file_parser
 
 place = "Rome"
 coordinates = [41.9028, 12.4964]
-creator = "Vincent"
+creator = "Vincent, Jillerme"
 year = 2023
 
 # load the dataframes
